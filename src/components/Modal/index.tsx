@@ -11,9 +11,10 @@ interface ModalProps {
   closable: boolean;
   visible: boolean
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  children: ReactNode;
 }
 
-const Modal = ({title, footer, onOk, okText, onCancel, cancelText, closable, visible, setVisible}: ModalProps) => {
+const Modal = ({title, footer, onOk, okText, onCancel, cancelText, closable, visible, setVisible, children}: ModalProps) => {
   if(!visible) return null;
 
   return (
@@ -23,10 +24,7 @@ const Modal = ({title, footer, onOk, okText, onCancel, cancelText, closable, vis
         {closable && ( <X color="#fff" className="cursor-pointer" onClick={() => setVisible(!visible)}/>)}
       </header>
       <main className="p-4">
-        <h4 className="font-bold mb-4">Textinho lorem ipsum:</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nunc diam. Nullam tempor eros est, ac consequat eros ullamcorper sed. Vestibulum imperdiet ipsum nunc, eget malesuada augue eleifend quis. Mauris accumsan turpis sagittis, vulputate tellus et, viverra lorem. Curabitur vulputate ac sapien a eleifend. Praesent massa lectus, sodales id dolor in, maximus fringilla tellus. Fusce ac ante sollicitudin, imperdiet lectus in, convallis sem. Nam orci metus, dignissim sit amet metus sit amet, bibendum feugiat velit. Sed eu nisl facilisis, condimentum justo at, pulvinar nisi. Quisque semper in sem sed accumsan.
-        </p>
+        {children}
       </main>
       {footer 
       ? footer 
