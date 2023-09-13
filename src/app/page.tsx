@@ -40,7 +40,7 @@ export default function Home() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nunc diam. Nullam tempor eros est, ac consequat eros ullamcorper sed. Vestibulum imperdiet ipsum nunc, eget malesuada augue eleifend quis. Mauris accumsan turpis sagittis, vulputate tellus et, viverra lorem. Curabitur vulputate ac sapien a eleifend. Praesent massa lectus, sodales id dolor in, maximus fringilla tellus. Fusce ac ante sollicitudin, imperdiet lectus in, convallis sem. Nam orci metus, dignissim sit amet metus sit amet, bibendum feugiat velit. Sed eu nisl facilisis, condimentum justo at, pulvinar nisi. Quisque semper in sem sed accumsan.
         </p>
       </Modal.Content>
-      <Modal.Footer>
+      <Modal.Footer className="justify-center">
         <button className="px-4 py-2 bg-gray-300 rounded-md" onClick={() => setModalVisible(prev => !prev)}>Fechar</button>
         <button className="px-4 py-2 bg-orange-400 rounded-md text-white" onClick={() => setModalVisible(prev => !prev)}>Concluir</button>
       </Modal.Footer>
